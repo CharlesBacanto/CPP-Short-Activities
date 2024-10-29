@@ -7,6 +7,8 @@ class shirt{
         std:: string size;
 
     public:
+
+
         //Get Size Function
         std::string getSize(){
             return size;
@@ -16,6 +18,8 @@ class shirt{
         void setSize(std::string aSize){
             if(aSize == "XS" || aSize == "S" || aSize == "M" || aSize == "L" || aSize == "XL"){
                 size=aSize;
+            }else{ /* Else statement for inputs that are not similar to the given specific inputs*/
+                size="Size is not applicable";
             }
         }
 
@@ -24,6 +28,10 @@ class shirt{
 int main(){
     shirt shirtOne;
     shirtOne.setSize("XL");
-    std:: cout << shirtOne.getSize();
+    std:: cout << shirtOne.getSize() << std:: endl;
+
+    shirt shirtTwo;
+    shirtTwo.setSize("Super Small");
+    std:: cout << shirtTwo.getSize() << std:: endl;
 
 }
