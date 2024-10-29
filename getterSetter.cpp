@@ -7,7 +7,17 @@ class shirt{
         std:: string size;
 
     public:
+        std:: string brand;
+        std:: string color;
 
+        //Constructor for a custom Shirt Product
+        shirt(std::string aSize, std::string aBrand, std:: string aColor){
+            setSize(aSize);
+            brand = aBrand;
+            color = aColor;
+        }
+        
+        
 
         //Get Size Function
         std::string getSize(){
@@ -26,12 +36,11 @@ class shirt{
 };
 
 int main(){
-    shirt shirtOne;
-    shirtOne.setSize("XL");
+    //Using constructor to declare a set of inputs instead of declaring multiple variables
+    shirt shirtOne("L","Uniqlo","Black");
     std:: cout << shirtOne.getSize() << std:: endl;
 
-    shirt shirtTwo;
-    shirtTwo.setSize("Super Small");
+    shirt shirtTwo("Super Small", "Oxygen", "Blue");
     std:: cout << shirtTwo.getSize() << std:: endl;
 
 }
