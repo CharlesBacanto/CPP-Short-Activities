@@ -43,4 +43,8 @@ int main(){
     shirt shirtTwo("Super Small", "Oxygen", "Blue");
     std:: cout << shirtTwo.getSize() << std:: endl;
 
+    shirt shirtThree("XL", "Nike", "White");
+    shirtThree.setSize("M");/*Update input using setSize*/
+    std:: cout << shirtThree.getSize() << std:: endl;
+
 }
